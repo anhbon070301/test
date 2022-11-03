@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="1.css">
+    <script src="a.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <style>
+        b {
+            color: red;
+            cursor: pointer;
+        }
+        table {
+            border:1px solid black;
+        }
+        th{
+            border:1px solid black;
+        }
+        td{
+            border:1px solid black;
+        }
+    </style>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Cost</th>
+                <th>Image</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody id="data">
+
+        </tbody>
+    </table>
+    <button id="btn" onclick="test()">xu li</button>
+</body>
+</html>
+
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            url: "http://localhost:7882/sanpham.php",
+            type: 'GET',
+            success: function (data) {
+                console.log(data);
+                var str = "";
+                $.each(JSON.parse(data), function (i, item) {
+                    str += '<tr>';
+                    str += '<td>' + item.productName + '</td>';
+                    str += '<td>' + item.categoryName + '</td>';
+                    str += '<td>' + item.cost + '</td>';
+                    str += '<td>' +'<img src="../Hoccss/images/'+item.image+'" width="100%" height="150" alt="k tair dc">'+ '</td>';
+                    str += '<td>' + item.description + '</td>';
+                    str += '</tr>';
+                })
+                $('#data').html(str);
+            },
+        });
+    });
+</script>
+
+
+
+
+<!-- // str += '<h3>'+data.name+', '+data.sys.country+'</h3>',
+// $.each(data.weather , function(i , item){
+//     str += '<p> Thời tiết '+item.main+'</p>';
+   
+// })
+// str += '<h3>'+data.main.temp+'</h3>'; -->
+<!-- // $.each(data , function(i , item){
+    //     str += '<tr>';
+    //         str += '<td>'+(i + 1)+'</td>';
+    //         str += '<td>'+item.title+'</td>';
+    //         str += '<td>'+item.body+'</td>';
+    //     str += '</tr>';
+    //     $('#data').html(str);
+    // }) -->

@@ -1,0 +1,23 @@
+.chuto{
+    font-size: 30px;
+}
+.mauxanh{
+color: green;
+}
+.innghieng{
+font-style: italic;
+}
+div.tieude h3{
+    font-size: 30px;
+}
+div.tieude1 h3{
+    color: green;
+}
+div.tieude2 h3{
+    font-style: italic;
+}
+div.tieude h3 i{
+    font-size: 30px;
+    font-style: italic;
+    color: hotpink;
+}

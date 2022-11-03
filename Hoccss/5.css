@@ -1,0 +1,28 @@
+.header__cha{
+    display: flex;
+    width: 1000px;
+    justify-content: space-between;
+    margin-left:70px ;
+    height: 50px;
+}
+.header__con1{
+    width: 200px;
+}
+.header__con2{
+    width: 400px;
+    margin-top: 10px;
+}
+.header__con3{ 
+    width: 200px;
+    text-align: right;
+    display: flex;
+   justify-content: space-between;
+}
+img{
+    width: 100%;
+    height: 50px;
+}
+.mau{
+    color: wheat;
+   margin: 5px;
+}

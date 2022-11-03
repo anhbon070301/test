@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học Css bài 2</title>
+    <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+    <link rel="stylesheet" href="2.css">
+    <script src="2.js"></script>
+
+</head>
+
+<body>
+    <h1>Clip: Bệnh nhân hét thất thanh khi nửa đêm gặp bác sĩ mặc đồ trắng toát, 2-3 người nữa vào dỗ vẫn chưa hoàn hồn
+    </h1>
+    <hr id="hr1">
+    <h2>Chỉ sau vài giờ lên sóng, đoạn video trên đã nhận được hơn 5.3 triệu lượt thả tim, leo vọt lên top đầu TikTok xứ
+        Trung.</h2>
+    <ul>
+
+        <li>Mục sở thị nơi ở của các anh bộ đội, ba mẹ mà thấy cảnh này chắc chắn dựng mình dậy dọn phòng ngay lập tức!
+        </li>
+        <li>Được fangirl nhí tỏ tình, anh bộ đội có ngay hành động đáp lại dễ thương hết sức</li>
+        <li>Clip: Mấy anh bộ đội cởi trần nhảy luyện cơ bụng, khoe trọn body “múi nào ra múi ấy”</li>
+    </ul>
+    <hr id="hr2">
+    <div>Có thể nói Douyin (còn gọi là TikTok Trung Quốc) chính là cái nôi cho sự phát triển mạnh mẽ của nền tảng này.
+        Douyin đã cho ra đời biết bao trào lưu, phủ sóng ra nhiều nơi trên thế giới. Mặt khác, một số video của dân tình
+        thế giới cũng được người dùng TikTok xứ Trung đăng tải lên và lọt top đầy ngỡ ngàng.</div>
+    <div>Mới đây, một video quay lại cảnh bệnh nhân và bác sĩ trò chuyện trong một bệnh viện ở Việt Nam lúc giữa khuya
+        bất ngờ lên top Douyin, nhận được hơn 5.3 triệu lượt thả tim chỉ sau vài giờ ngắn ngủi đăng tải khiến dân tình
+        không khỏi chú ý. Ủa, có "dzụ" gì mà hot dữ vậy ta?</div>
+
+        <div id="demo"> 
+            <p v-for="item in items"> {{ item.tilte }}</p>
+            <button v-on:click="sayOhYeah"> Click </button>
+        </div>
+</body>
+
+</html>
+<script>
+window.onload = function () {
+    var vm = new Vue({
+        el: '#demo',
+        data: {
+            items: [
+                { tilte: 'Hôm nay thứ 3' },
+                { content: 'Sắp được nghỉ rồi' },
+                { content: 'Về nhà đi thôi' }
+            ]
+        },
+        methods: {
+           sayOhYeah() {
+                this.items.forEach((value, index) => {
+                    alert('Toi la Vuejs' + value.tilte)
+                });  
+           }
+        }
+    })
+}
+</script>

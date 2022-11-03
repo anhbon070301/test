@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  
+    <style>
+        .thongbao{
+            display: flex;
+            flex-direction: column;
+            align-content: space-between;
+        }
+        .thongbao_tren{
+            display: flex;
+            justify-content: space-between;
+        }
+          .button{
+        width: 50px ;
+        height: 30px;
+        border-radius: 20px;
+    }
+    body{
+       background-image: url('https://taoanhonline.com/wp-content/uploads/2019/08/hinh-nen-mau-hong-0.jpg');
+
+    }
+        .giua{
+            margin-top: 100px;
+            margin-left: 100px;
+        }
+        .giua1{
+            margin-top: 10px;
+            margin-left: 50px;
+        }
+        .giua2{
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+        .button1{
+        width: 200px ;
+        height: 120px;
+        border-radius: 100px;
+        font-size: 50px;
+        background-color: violet;
+    }
+        div.traloi{
+            
+            font-size: 40px;
+            margin-right: 100px;
+            color: tomato;
+        }
+        .chay {
+  
+  position: relative;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.tim{
+    width: 300px;
+    position: relative;
+    animation-name: bantim ;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+.tim1{
+    width: 300px;
+    position: relative;
+    animation-name: bantim1 ;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes bantim1{
+    0% {color:crimson; left:100px; top:200px; font-size: 20px;}
+ 
+  50% {color:seagreen; left:250px; top:100px; font-size: 50px;}
+  
+  100% {color:#DF013A; left:100px; top:0px; font-size: 70px;}
+ 
+}
+@keyframes bantim{
+    0% {color:crimson; left:200px; top:200px; font-size: 20px;}
+  25% {color:lightsalmon; left:300px; top:150px; font-size: 40px;}
+  50% {color:seagreen; left:200px; top:100px; font-size: 50px;}
+  75% {color:midnightblue; left:300px; top:50px; font-size: 60px;}
+  100% {color:#DF013A; left:200px; top:0px; font-size: 70px;}
+ 
+}
+@keyframes example {
+  0% {background-color:crimson; left:0px; top:0px;}
+  25% {background-color:lightsalmon; left:100px; top:0px;}
+  50% {background-color:seagreen; left:100px; top:100px;}
+  75% {background-color:midnightblue; left:0px; top:100px;}
+  100% {background-color:#DF013A; left:0px; top:0px;}
+}
+    </style>
+    <div class="thongbao">
+        <div class="thongbao_tren">
+            <div>
+                <p>Điều mày muốn viết...</p>
+            <H1>Bạn có thích tôi không?</H1>
+            <button class="button1" onclick="test()" > Có</button>
+            <button class="button chay" >Không</button>
+            </div>
+            
+            <div class="traloi"  id="4">
+        
+            </div>
+        </div>
+        <div class="thongbao_duoi">
+            
+            <div class="giua tim"  id="1">
+   
+            </div>
+            <div class="giua1 tim1"  id="2">
+           
+            </div>
+            <div class="giua2 tim"  id="3">
+           
+            </div> 
+        </div>
+       
+    </div>
+   
+    
+    
+    <script>
+        function test(){
+            var test2 = document.getElementById('1');
+            // var tb = document.createElement('div');
+           
+           
+            test2.innerHTML = `
+            <i class="fa fa-heart to"></i>
+           
+            `;
+            var test2 = document.getElementById('2');
+            // var tb = document.createElement('div');
+          
+            test2.innerHTML = `
+            <i class="fa fa-heart to"></i>
+           
+            `;
+            var test2 = document.getElementById('3');
+            // var tb = document.createElement('div');
+          
+            test2.innerHTML = `
+            <i class="fa fa-heart to"></i>
+           
+            `;
+            var test1 = document.getElementById('4');
+            test1.innerHTML = `
+            <p >Tôi cũng rất thích bạn</p>
+            `;
+         
+        }
+    </script>
+</body>
+</html>

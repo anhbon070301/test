@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <script src="main.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    
+    <header><h1>Toi la tieu de</h1> </header>
+    <img src="https://image.thanhnien.vn/w660/Uploaded/2022/zxaijr/2021_05_12/chuchinhuocchuctudanthatbai5_xppl.png" alt="">
+   
+    
+    <div>Chúc Tự Đan (giản thể: 祝绪丹, phồn thể: 祝緒丹, bính âm: Zhù Xù Dān) là nữ diễn viên, ca sĩ, người mẫu người Trung Quốc. Tốt nghiệp Học viện Hý kịch Trung ương, hiện đang trực thuộc công ty giải trí Truyền thông Gia Hành [1].</div>
+    <div id="app">
+        <a v-bind:href="url"> <p>{{ title }}</p></a>
+       
+        <p>{{ mota }}</p>
+    </div>
+    <div id = "nutbam">
+        <h3>bam lan: {{couter}}</h3>
+        <button v-on:click="couter ++">Click me</button>
+        
+    </div>
+    <footer><h1>FOOTER</h1></footer>
+
+  </body>
+  <script>
+        var vm = new Vue({
+        el: "#app",
+        data:{
+            title: 'Chúc Tự Đan',
+            mota: 'Chúc Tự Đan bắt đầu học khiêu vũ từ năm 6 tuổi, và được nhận vào một trường cao đẳng chuyên nghiệp để tiếp tục học sau khi tốt nghiệp trung học cơ sở. Năm 18 tuổi, lúc đang đi mua sắm trên phố cùng mẹ mình, cô đã được mời quay quảng cáo, vì vậy khi chọn chuyên ngành lúc nhập học, cô đã chọn diễn xuất.[2] Năm 2011, cô làm người mẫu cho tạp chí Mina. Tháng 3 năm 2012, cô nằm trong trong top sáu của chương trình tìm kiếm tài năng trực tuyến Tôi là hoa khôi học đường mùa đầu tiên,[3] tháng 7 cùng năm, cô đã ký hợp đồng và trở thành nghệ sĩ trực thuộc Le.com.[4]',
+            url: 'https://vi.wikipedia.org/wiki/Ch%C3%BAc_T%E1%BB%B1_%C4%90an'
+        },
+        method:{
+
+        }
+        });
+        var clickMe = new Vue({
+          el:"#nutbam",
+          data:{
+            couter : 0,
+          },
+          method:{
+            abc(number){
+              console.log('nhấn lần ');
+              this.couter +=number;
+            }
+          },
+        });
+    </script>
+</html>

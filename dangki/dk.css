@@ -1,0 +1,42 @@
+table{
+    
+    margin-top: 50px;
+}
+.dangki_cot{
+    
+    color:white;
+}
+  body{
+        background-image: url("https://phongvu.vn/cong-nghe/wp-content/uploads/2020/11/119234579_169457918065236_755533166268046471_n-1.jpg")
+    }
+.dangki{
+  display: flex;
+  justify-content: center;
+}
+h2{
+    color:#ffffff;
+}
+.mau{
+    
+    border:white 2px solid;
+}
+i{
+   margin: 5px;
+    color:white;
+}
+.dam{
+    font-size: 25px;
+    
+}
+.do{
+    color: red;
+}
+@media only screen and (max-width: 1000px){
+    body{
+        display: none;
+    }
+    .mau{
+      margin: 0px 50px 0px 50px;
+    }
+  }
+     

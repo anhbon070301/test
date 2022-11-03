@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    }
+.web{
+    display: flex;
+   flex-direction: column;
+}
+.trang{
+    display: flex;
+   
+}
+.web__tieude
+{
+    margin-top: 0;
+    background-color:#242526;
+    grid-column: 1/ span 2;
+    display: grid;
+    grid-template-columns: 350px 500px 220px;
+    grid-template-rows: 50px;
+    justify-content: space-between;
+    align-content: end;
+    border-bottom: 1pt solid white;
+    height: 70px;
+  
+}
+.web__muc{
+    background-color:#242526 ;
+    border-right: 1px solid white;
+    width: 300px;
+    /* height: 400px; */
+}
+.web__tin{
+    width: 980px;
+    background-color: #242526;
+    /* height: 400px; */
+}
+i.icon{
+    color: #e4e6eb;
+    font-size: 28px;
+}
+.web__tieude--icon1{
+    margin-left: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-content: end;
+}
+.web__tieude--icon2{
+  display: flex;
+  justify-content:space-between;
+}
+.web__tieude--icon3{
+   display: flex;
+   justify-content: space-around;
+   margin-right: 20px;
+}
+
+i.icon1{
+    font-size: 35px;
+}
+input.input__tim{
+    width: 200px;
+    border-radius: 20px;
+    height: 28px;
+}
+.web__tieude--search .icon{
+    position: absolute;
+    left: 10px;
+    top: 5px
+}
+.web__tieude--search {
+    position: relative;
+}
+.web__muc{
+    display: flex;
+    flex-direction: column;
+}
+.web__muc--tren{
+    display: flex;
+    flex-direction: column;
+}
+.web__muc--duoi{
+    border-top: 1px solid white;
+    display: flex;
+    flex-direction: column;
+}
+p.chu{
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #e4e6eb;
+    margin-left: 10px ;
+    
+}
+.chimuc
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-end;
+    margin-left: 10px;
+}
